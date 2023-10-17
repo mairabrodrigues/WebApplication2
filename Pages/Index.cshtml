@@ -1,0 +1,38 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <div class="row">
+        @foreach (var shows in Model.SerieList)
+        {
+            <div class="col-sm-2">
+                <div class="card text-center bg-light mb-4">
+
+                    <div class="card-header">
+                        € @shows.Price
+                        <div class="card-body" style="height:124px; ">
+                            <h5 class="card-title">@shows.Show</h5>
+
+                            <p class="card-text">@shows.Description</p>
+                            </div>
+                            <div class="card-footer">
+                            <div>
+                                <a href="btn btn-primary">Add to cart</a>
+
+                            
+                        </div>
+
+                    </div>
+
+                </div>
+                </div>
+
+            </div>
+
+        }
+</div>
